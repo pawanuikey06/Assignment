@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>User Details</title>
+    <script src="https://cdn.jsdelivr.net/npm/tailwindcss@3.0.23/dist/tailwind.min.js"></script>
+</head>
+<body class="bg-gray-50 flex items-center justify-center min-h-screen">
+
+    <div class="max-w-md w-full bg-white p-8 rounded-xl shadow-lg">
+        <h2 class="text-3xl font-semibold text-center text-gray-800 mb-6">User Details</h2>
+
+        <!-- Flash Messages -->
+        {% with messages = get_flashed_messages(with_categories=true) %}
+        {% if messages %}
+            <div class="space-y-4">
+                {% for category, message in messages %}
+                    <div class="p-4 rounded-md 
+                                {% if category == 'success' %}bg-green-500 text-white{% endif %}
+                                {% if category == 'error' %}bg-red-500 text-white{% endif %}">
+                        {{ message }}
+                    </div>
+                {% endfor %}
+            </div>
+        {% endif %}
+        {% endwith %}
+
+        <!-- Display User Details -->
+        {% if user %}
+            <div class="space-y-4">
+                <p><strong class="text-lg font-medium text-gray-700">Name:</strong> {{ user[1] }}</p>
+                <p><strong class="text-lg font-medium text-gray-700">Email:</strong> {{ user[2] }}</p>
+                <p><strong class="text-lg font-medium text-gray-700">Role:</strong> {{ user[3] }}</p>
+            </div>
+            <div class="mt-6 text-center">
+                <a href="{{ url_for('users') }}" class="text-blue-500 hover:underline">Back to Users List</a>
+            </div>
+        {% else %}
+            <p class="text-center text-red-500">No user found with this ID.</p>
+        {% endif %}
+    </div>
+</body>
+</html>
