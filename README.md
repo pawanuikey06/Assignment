@@ -33,7 +33,8 @@ Before you begin, ensure you have the following installed:
       The application interacts with a MySQL database. Below is the 
       schema for the users table.
 
-    CREATE TABLE users (
+    ```bash
+     CREATE TABLE users (
     id INT AUTO_INCREMENT PRIMARY KEY,
     name VARCHAR(255) NOT NULL,
     email VARCHAR(255) NOT NULL UNIQUE,
@@ -44,12 +45,13 @@ Before you begin, ensure you have the following installed:
     
 
     **Configure DataBase Connection**
+  ```bash
     db_config = {
     'host': 'localhost',
     'user': 'root',  
     'password': 'password',  
     'database': 'your_database'  
-}
+   }
 
 
 
@@ -57,7 +59,7 @@ Before you begin, ensure you have the following installed:
 
   **SQL Queries**
 
-  
+```bash
   1- INSERT INTO users (name, email, role)
     VALUES
     ('Pawan', 'xyz@gmail.com', 'Software 
