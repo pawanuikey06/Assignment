@@ -51,8 +51,8 @@ def new_user():
         email = request.form['email']
         role = request.form['role']
         
-        conn = mysql.connector.connect(**db_config)
-        cursor = conn.cursor()
+        conn =mysql.connector.connect(**db_config)
+        cursor =conn.cursor()
 
         query = "INSERT INTO users (name, email, role) VALUES (%s, %s, %s)"
         cursor.execute(query, (name, email, role))
@@ -73,7 +73,7 @@ def new_user():
 def user_detail(id):
     try:
         conn = mysql.connector.connect(**db_config)
-        cursor = conn.cursor()
+        cursor= conn.cursor()
         query = "SELECT * FROM users WHERE id = %s"
         cursor.execute(query, (id,))
         user = cursor.fetchone() 
