@@ -56,6 +56,8 @@ Before you begin, ensure you have the following installed:
 ##  Task 2 
 
   **SQL Queries**
+
+  
   1- INSERT INTO users (name, email, role)
     VALUES
     ('Pawan', 'xyz@gmail.com', 'Software 
