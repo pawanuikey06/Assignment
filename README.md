@@ -45,15 +45,13 @@ Before you begin, ensure you have the following installed:
     
 
     **Configure DataBase Connection**
-  ```bash
-    db_config = {
+    ```bash
+     db_config = {
     'host': 'localhost',
     'user': 'root',  
     'password': 'password',  
     'database': 'your_database'  
-   }
-
-
+     }
 
 ##  Task 2 
 
