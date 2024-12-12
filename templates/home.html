@@ -7,9 +7,27 @@
     <!-- Tailwind CSS CDN -->
     <script src="https://cdn.tailwindcss.com"></script>
 </head>
-<body class="bg-blue-100 flex justify-center items-center h-screen">
+<body class="bg-blue-100 min-h-screen">
 
-    <h1 class="text-4xl font-bold text-blue-600"> Eactive Software Development Assignment</h1>
+    <!-- Navbar -->
+    <nav class="bg-blue-600 text-white p-4">
+        <div class="container mx-auto flex justify-between items-center">
+            <h1 class="text-2xl font-bold">Eactive Assignment</h1>
+            <ul class="flex space-x-6">
+                <li><a href="{{ url_for('hello') }}">Hello</a></li>
+                <li><a href="{{ url_for('users') }}" class="hover:underline">Users</a></li>
+                <li><a href="{{ url_for('new_user') }}" class="hover:underline">Add New User</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="flex justify-center items-center h-[calc(100vh-64px)]">
+        <h1 class="text-4xl font-bold text-blue-600 text-center">Eactive Software Development Assignment</h1>
+    </section>
+
+   
+    
 
 </body>
 </html>

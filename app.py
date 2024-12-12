@@ -92,6 +92,7 @@ def user_detail(id):
         return redirect(url_for('users'))
 
 
+
 if __name__ == '__main__':
     app.run(debug=True)
 
