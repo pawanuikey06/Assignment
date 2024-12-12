@@ -40,15 +40,7 @@ Before you begin, ensure you have the following installed:
     role VARCHAR(50) NOT NULL
      ) ;
 
-     *Populate the Database with Sample Data*
-     You can populate the users table with sample data using the 
-       following SQL commands. You can run these queries in a MySQL 
-         client or through a MySQL shell.
-
-    -- Insert Sample Users
-     INSERT INTO users (name, email, role)
-    VALUES
-    ('Pawan', 'pawanuikey690@gmail.com', 'Software Developer'),
+     
     
 
     **Configure DataBase Connection**
@@ -58,6 +50,24 @@ Before you begin, ensure you have the following installed:
     'password': 'password',  
     'database': 'your_database'  
 }
+
+
+
+##  Task 2 
+
+  **SQL Queries**
+  1- INSERT INTO users (name, email, role)
+    VALUES
+    ('Pawan', 'xyz@gmail.com', 'Software 
+      Developer'),
+
+  2 -SELECT id, name, email, role FROM users;
+
+  3- SELECT id, name, email, role FROM users 
+    WHERE id = 1;
+
+
+
 
 
 
